@@ -1,0 +1,89 @@
+GGM1:
+  simulator: 'GGM3MixBiDiag'
+  n_nodes: 50
+  sig: 0.75
+  cond_number: 10
+  n_samples: 15000
+  n_train: 12000
+  n_val: 2000
+
+
+GGM2:
+  simulator: 'GGMMultiMixBlockDiag'
+  n_nodes: 90
+  sig_high: 0.75
+  sig_low: 0.5
+  n_blocks: 3
+  sparsity: 0.10
+  cond_number: 10
+  dim_z: 10
+  rbf_K: 10
+  rbf_c_range: [-1, 1]
+  rbf_beta_range: [0.1, 0.5]
+  rbf_w_range: [-10, 10]
+  n_samples: 15000
+  n_train: 12000
+  n_val: 2000
+
+
+NPN1:
+  simulator: 'NPN3MixBiDiag'
+  n_nodes: 50
+  sig: 0.75
+  cond_number: 10
+  func_type: 'sinusoids'
+  alpha: 1
+  sd_scaler: 0.5
+  n_samples: 15000
+  n_train: 12000
+  n_val: 2000
+
+
+NPN2:
+  simulator: 'NPNMultiMixBlockDiag'
+  n_nodes: 90
+  sig_high: 0.75
+  sig_low: 0.5
+  n_blocks: 3
+  sparsity: 0.10
+  cond_number: 10
+  func_type: 'power'
+  alpha: 2
+  sd_scaler: 0.75
+  dim_z: 10
+  rbf_K: 10
+  rbf_c_range: [-1, 1]
+  rbf_beta_range: [0.1, 0.5]
+  rbf_w_range: [-10, 10]
+  n_samples: 15000
+  n_train: 12000
+  n_val: 2000
+
+
+DAG1:
+  simulator: 'LinearSEM2Mix'
+  graph_type: 'tree'
+  n_nodes: 50
+  n_children_low: 1
+  n_children_high: 3
+  sig_low: 0.1
+  sig_high: 0.5
+  noise_sd: 1
+  n_samples: 50000
+  n_train: 45000
+  n_val: 3000
+
+
+DAG2:
+  simulator: 'HermiteSEM2Mix'
+  graph_type: 'tree'
+  n_nodes: 50
+  n_children_low: 1
+  n_children_high: 3
+  hermite_type: 'fn'
+  n_hermite: 3
+  sig_ranges: [[0, 0],[0.1, 0.5], [0.05, 0.1], [0.02, 0.05]]
+  noise_sd: 1
+  n_samples: 50000
+  n_train: 45000
+  n_val: 3000

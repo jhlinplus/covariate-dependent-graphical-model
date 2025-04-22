@@ -1,0 +1,27 @@
+data_configs:
+  dataset_class: 'SimDatasetWithCovariates'
+
+network_configs:
+  model_name: 'dnnCGM'
+  num_nodes: 50
+  num_covariates: 2
+  beta_hidden_dims: 64
+  beta_dropout: 0.3
+
+opt_configs:
+  learning_rate: 0.0005
+  scheduler_type: 'StepLR'
+  step_size: 20
+  gamma: 0.25
+  
+train_configs:
+  max_epochs: 100
+  gradient_clip_val: 1.0
+  batch_size: 512
+  verbose: 10
+  es_patience: null
+  es_monitor: 'val_loss'
+  min_epochs: 100
+  num_val: 1000
+  num_test: 1000
+

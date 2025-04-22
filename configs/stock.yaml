@@ -1,0 +1,21 @@
+network_configs:
+  model_name: 'dnnCGM'
+  num_nodes: 79
+  num_covariates: 3
+  beta_hidden_dims: [32]
+  beta_dropout: 0.1
+
+opt_configs:
+  learning_rate: 0.001
+  scheduler_type: 'MultiStepLR'
+  milestones: [20, 50]
+  gamma: 0.5
+  
+train_configs:
+  max_epochs: 200
+  gradient_clip_val: 1.0
+  limit_val_batches: 50
+  batch_size: 256
+  verbose: 1
+  es_patience: null
+  es_monitor: 'val_loss'

@@ -1,0 +1,25 @@
+data_configs:
+  dataset_class: 'SimDatasetWithCovariates'
+
+network_configs:
+  model_name: 'RegGMM'
+  num_nodes: 90
+  num_covariates: 10
+
+opt_configs:
+  learning_rate: 0.002
+  scheduler_type: 'StepLR'
+  step_size: 25
+  gamma: 0.5
+  
+train_configs:
+  max_epochs: 100
+  gradient_clip_val: 1.0
+  limit_val_batches: 50
+  batch_size: 512
+  verbose: 10
+  es_patience: null
+  es_monitor: 'val_loss'
+  num_val: 1000
+  num_test: 1000
+

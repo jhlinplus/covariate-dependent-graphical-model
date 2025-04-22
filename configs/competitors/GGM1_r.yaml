@@ -1,0 +1,12 @@
+data:
+  n_nodes: 50
+  
+mb:
+  lambda_low: null
+  lambda_high: null
+  lambda_length: 10
+
+glasso:
+  lambda_low: null
+  lambda_high: null
+  lambda_length: 10

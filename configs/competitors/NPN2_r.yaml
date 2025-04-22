@@ -1,0 +1,19 @@
+data:
+  n_nodes: 90
+  
+mb:
+  lambda_low: null
+  lambda_high: null
+  lambda_length: 10
+
+glasso:
+  lambda_low: null
+  lambda_high: null
+  lambda_length: 10
+
+space:
+  lambda_low: 0.5
+  lambda_high: 3
+  lambda_length: 10
+  alpha: 1
+  iter: 100
