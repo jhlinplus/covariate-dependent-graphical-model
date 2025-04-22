@@ -69,7 +69,7 @@ Finally, to run the entire pipeline for any specific data setting (as specified 
 See Appendix E of the manuscript for the accessibility of the raw data. 
 
 ### The resting-state fMRI Dataset
-* Raw data is stored in the format of `.RData`. We first leverage the [reticulate](https://rstudio.github.io/reticulate/) package to convert the data so that it can be read through Python. See `data/fmri-data-convert.R`, which outputs the corresponding `.npz` files.
+* Raw data is stored in the format of `.RData`. We first leverage the [reticulate](https://rstudio.github.io/reticulate/) package to convert the data so that it can be read in through Python. See `data/fmri-data-convert.R`, which outputs the corresponding `.npz` files.
 * See `notebooks/demo-run-fmri-data.ipynb` for the end-to-end model run and results visualization.
 
 
